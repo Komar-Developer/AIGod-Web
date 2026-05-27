@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI GOD — Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         max-width: 760px; margin: 3rem auto; padding: 0 1.5rem; line-height: 1.6;
+         color: #1a1a1a; background: #fafafa; }
+  h1 { font-size: 1.8rem; }
+  h2 { margin-top: 2rem; font-size: 1.2rem; border-bottom: 1px solid #e5e5e5; padding-bottom: .3rem; }
+  code { background: #f0f0f0; padding: 1px 4px; border-radius: 3px; }
+  .meta { color: #777; font-size: .9rem; margin-bottom: 2rem; }
+  a { color: #006adb; }
+</style>
+</head>
+<body>
+
+<h1>AI GOD — Privacy Policy</h1>
+<p class="meta">Effective date: 26 May 2026 · Last updated: 26 May 2026</p>
+
+<h2>TL;DR</h2>
+<p>AI GOD is a desktop application that runs entirely on your Mac.
+<strong>We do not collect, transmit, or store any user data.</strong> No
+analytics, no telemetry, no crash reporting, no third-party tracking.</p>
+
+<h2>Data we do NOT collect</h2>
+<ul>
+  <li>Personal information (name, email, address, phone, IP, device identifiers)</li>
+  <li>Your conversations — they live only on your Mac</li>
+  <li>API keys — stored locally, encrypted in macOS Keychain</li>
+  <li>Usage analytics (clicks, time-on-app, feature usage)</li>
+  <li>Crash reports — logs are written only to <code>~/Library/Application Support/AI GOD/aigod.log</code> and are never uploaded</li>
+  <li>Cookies or browser fingerprints</li>
+</ul>
+
+<h2>How the app works</h2>
+<p>AI GOD runs a local Express backend bound exclusively to
+<code>127.0.0.1</code> (loopback). The Electron UI talks to this backend
+over the loopback interface only. No external listener is exposed.</p>
+
+<p>Two <strong>optional</strong> network connections may occur, both initiated by you:</p>
+<ol>
+  <li><strong>AI provider requests</strong> (only when you send a message):
+      direct HTTPS request to the provider you chose (OpenAI, Anthropic,
+      Google, OpenRouter), authenticated with your own API key. The request
+      goes from your Mac straight to the provider — we are not in the
+      middle, we never see it.</li>
+  <li><strong>License activation</strong> (Gumroad / Developer ID build only):
+      one-time Ed25519 signature verification. The license file you paste
+      is checked locally on your Mac. <em>The Mac App Store build does not
+      need a license</em> — Apple manages entitlement instead.</li>
+</ol>
+
+<h2>Where your data lives</h2>
+<p>All data AI GOD creates lives in:</p>
+<ul>
+  <li><code>~/Library/Application Support/AI GOD/</code> — local user profile,
+      chat history (<code>db.json</code>), preferences</li>
+  <li><code>~/Library/Containers/com.aigod.app/Data/...</code> — same data in
+      sandboxed form for the Mac App Store build</li>
+  <li>macOS Keychain — encrypted API keys, license token</li>
+</ul>
+<p>None of this data is ever uploaded, synced, or shared.</p>
+
+<h2>Third-party AI providers</h2>
+<p>When you send a message, the request is made directly from your Mac to
+the AI provider you selected. Their privacy policy applies to that request:</p>
+<ul>
+  <li><a href="https://openai.com/policies/privacy-policy">OpenAI</a></li>
+  <li><a href="https://www.anthropic.com/legal/privacy">Anthropic</a></li>
+  <li><a href="https://policies.google.com/privacy">Google</a></li>
+  <li><a href="https://openrouter.ai/privacy">OpenRouter</a></li>
+</ul>
+
+<h2>Children's privacy</h2>
+<p>AI GOD is a productivity tool for adults and is not directed at children
+under 13. Because we collect no personal data, we cannot inadvertently
+collect data from minors.</p>
+
+<h2>Changes to this policy</h2>
+<p>We may update this policy if the architecture of the app changes. Any
+update will increase the "Last updated" date at the top of this document.
+Material changes will also be announced in the in-app release notes.</p>
+
+<h2>Contact</h2>
+<p>Open an issue at
+<a href="https://github.com/Komar-Developer/AIGod-Web/issues">github.com/Komar-Developer/AIGod-Web/issues</a>
+with the label <code>privacy</code>, or write to
+<a href="mailto:aigod.pro2026@gmail.com">aigod.pro2026@gmail.com</a>. We
+will respond within 7 days.</p>
+
+<hr>
+<p><small>© 2026 Adelio Falcó Martí · AI GOD</small></p>
+
+</body>
+</html>
