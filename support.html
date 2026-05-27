@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI GOD — Support</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         max-width: 760px; margin: 3rem auto; padding: 0 1.5rem; line-height: 1.6;
+         color: #1a1a1a; background: #fafafa; }
+  h1 { font-size: 1.8rem; }
+  h2 { margin-top: 2rem; font-size: 1.2rem; border-bottom: 1px solid #e5e5e5; padding-bottom: .3rem; }
+  h3 { margin-top: 1.5rem; font-size: 1rem; }
+  code { background: #f0f0f0; padding: 1px 4px; border-radius: 3px; }
+  .meta { color: #777; font-size: .9rem; margin-bottom: 2rem; }
+  a { color: #006adb; }
+  .cta { display: inline-block; background: #0a0; color: #fff; padding: .6rem 1.2rem;
+         border-radius: 6px; text-decoration: none; margin-top: 1rem; }
+</style>
+</head>
+<body>
+
+<h1>AI GOD — Support</h1>
+<p class="meta">We respond within 48 hours.</p>
+
+<h2>Quick help</h2>
+<a class="cta" href="https://github.com/Komar-Developer/AIGod-Web/issues/new">Open a support ticket on GitHub</a>
+
+<h2>Frequently asked questions</h2>
+
+<h3>What is AI GOD?</h3>
+<p>A native macOS app that lets you chat with OpenAI, Anthropic, Google and
+OpenRouter from a single window. You bring your own API key (BYOK), so the
+provider bills you directly for what you use — usually a few cents a day.</p>
+
+<h3>Do my conversations leave my Mac?</h3>
+<p>Only the actual message you send goes to the AI provider you chose. Chat
+history, preferences and API keys stay on your Mac. We have no server in
+the middle. See our <a href="./privacy.html">Privacy Policy</a> for details.</p>
+
+<h3>What does the 15-day trial include?</h3>
+<p>Full functionality, no limits, no watermark. After 15 days the app
+prompts for a license. The Mac App Store build has no trial because Apple
+handles entitlement directly.</p>
+
+<h3>How do I activate a license?</h3>
+<p>After buying on Gumroad you will receive an email with a license inside
+a BEGIN/END block. Open AI GOD → trial overlay → <strong>Paste your
+license</strong> → paste the block → <strong>Activate</strong>. The license
+binds to this Mac and works offline forever.</p>
+
+<h3>Can I use the license on more than one Mac?</h3>
+<p>Yes. The license is tied to your email, not to a hardware ID. Activate
+it on as many of your personal Macs as you want.</p>
+
+<h3>How do I get an API key?</h3>
+<ul>
+  <li>OpenAI: <a href="https://platform.openai.com/api-keys">platform.openai.com/api-keys</a></li>
+  <li>Anthropic: <a href="https://console.anthropic.com/settings/keys">console.anthropic.com/settings/keys</a></li>
+  <li>Google AI Studio: <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a></li>
+  <li>OpenRouter (one key for many models): <a href="https://openrouter.ai/keys">openrouter.ai/keys</a></li>
+</ul>
+
+<h3>"The app is damaged and cannot be opened"</h3>
+<p>The download was probably corrupted by your browser. Re-download the
+DMG, then run in Terminal:</p>
+<p><code>xattr -dr com.apple.quarantine /Applications/AI\ GOD.app</code></p>
+
+<h3>Microphone does not work</h3>
+<p>Go to <strong>System Settings → Privacy &amp; Security → Microphone</strong>
+and make sure AI GOD is allowed. If it is not listed, launch AI GOD and
+click the mic button once; macOS will ask for permission.</p>
+
+<h3>"Invalid API key" when I send a message</h3>
+<p>Open <strong>Settings → API Keys</strong> inside the app and re-paste
+the key. Verify on the provider's website that the key is still active and
+has credit available.</p>
+
+<h3>Why does AI GOD need a microphone entitlement?</h3>
+<p>Only if you use the voice-to-text button (Whisper transcription). The
+microphone is never accessed unless you press that button.</p>
+
+<h3>Will AI GOD work without an internet connection?</h3>
+<p>The UI launches and your previous conversations open offline, but
+sending a new message requires reaching the AI provider you chose. License
+activation happens once, then re-verification is fully offline.</p>
+
+<h3>I lost my license file — what now?</h3>
+<p>Open a support ticket above with your Gumroad order ID and we will
+re-issue it within 24 hours.</p>
+
+<h2>System requirements</h2>
+<ul>
+  <li>macOS 12.0 (Monterey) or later</li>
+  <li>Intel or Apple Silicon (universal binary)</li>
+  <li>An API key from at least one supported provider</li>
+</ul>
+
+<h2>Contact</h2>
+<p>For anything not covered above:</p>
+<ul>
+  <li><strong>Bug reports / feature requests:</strong>
+      <a href="https://github.com/Komar-Developer/AIGod-Web/issues/new">GitHub Issues</a></li>
+  <li><strong>Email:</strong>
+      <a href="mailto:aigod.pro2026@gmail.com">aigod.pro2026@gmail.com</a></li>
+  <li><strong>Security disclosures:</strong>
+      please use GitHub Security Advisories (private)</li>
+</ul>
+
+<hr>
+<p><small>© 2026 Adelio Falcó Martí · AI GOD</small></p>
+
+</body>
+</html>
