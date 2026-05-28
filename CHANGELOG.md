@@ -2,6 +2,23 @@
 
 All notable changes to AI GOD (direct edition) are documented here.
 
+## [1.0.6] – 2026-05-28
+
+### Fixed
+- **Mac App Store**: v1.0.5 crashed at launch under the sandbox with
+  `Error: listen EPERM: operation not permitted 127.0.0.1:3001`. Root cause:
+  the `com.apple.security.network.server` entitlement was missing from
+  `entitlements.mas.plist`. Under App Sandbox, any `listen()` call —even on
+  loopback— requires this entitlement.
+- Restored `com.apple.security.network.server` with documented justification:
+  the bundled Express server is bound exclusively to `127.0.0.1:3001` for
+  local IPC between the renderer and the bundled Node backend. No external
+  connections are accepted and no public interface is ever bound.
+
+### Notes
+- No functional changes compared to v1.0.5.
+- Submitted to App Review on May 28, 2026.
+
 ## [1.0.5] - 2026-05-26
 
 ### Fixed
